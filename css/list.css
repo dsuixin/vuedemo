@@ -1,0 +1,90 @@
+.selectcity-conkj{padding:10px 18px;}
+.selectcity-conkj a{margin-bottom: 7px;}
+/*2016-8-23 新增价格排序和筛选城市换位 gqq*/
+.header-nav{width: 100%;height:39px;border-bottom: 1px solid #dadada;background-color: #fbfbfb;}
+.header-nav ul{width: 100%;height:39px;list-style: none;}
+.header-nav ul li{width: 50%;height:39px;line-height: 39px; float: left;display: inline-block;text-align: center;box-sizing: border-box;font-size: 16px;color: #595959;}
+.li-border{border-right: 1px solid #dadada;}
+.top-navheight{top:85px;}
+.headerprice{font-size: 16px;color: #595959;background: url(../images/shoplist_default.png) no-repeat right center;background-size: 9px 13px;    padding-right: 12px;}
+.headerprice-up{background: url(../images/shoplist_asc.png) no-repeat right center;background-size: 9px 13px;}
+.headerprice-down{background: url(../images/shoplist_desc.png) no-repeat right center;background-size: 9px 13px;}
+.header-cityselect{position: static;color: #595959;background: url(../images/shoplist_area.png) no-repeat right center;background-size: 17px 14px;}
+.adds-citys{display: inline-block;color: #f11721;font-size: 14px;    background: url(../images/meg-bgtb.png) no-repeat left center;    background-size: 11px 16px;padding-left: 13px; }
+.area-country{ display: inline-block;color: #999999;font-size: 14px;    background: url(../images/icon_earth.png) no-repeat left center;    background-size: 14px 14px;padding-left: 16px; }
+.wifi-4g{ display: inline-block;color: #999999;font-size: 14px;    background: url(../images/icon_wifi.png) no-repeat left center;    background-size: 14px 14px;padding-left: 16px;}
+.p-bgnone{background: #ffffff;    box-sizing: border-box;} 
+.urog-pgl i{color: #999999;}
+.list-divtwo p.right-mius,.list-divtwo p.right-sell{font-size: 12px;color: #999999;padding-left:25px;box-sizing: border-box;white-space:nowrap;    overflow: hidden;}
+.right-mius{background: url(../images/icon_jian.png) no-repeat left top;background-size:18px 18px;padding-bottom: 7px;} 
+.right-sell{background: url(../images/icon_hui.png) no-repeat left top;background-size:18px 18px;     padding-bottom: 7px;}
+.right-sell i{color: #ff2b35;}
+/*修改右侧right每一栏的padding 7px 15px 8px 15px;*/
+.list-divtwo li{padding:7px 0 0 0;}
+.list-divtwo h4,.list-divtwo p{padding-left:15px;padding-right: 15px;}
+.right-youhui{width:100%; box-sizing: border-box; border-top: 1px solid #dadada;margin-top: 6px; padding-top: 7px;padding-left:15px;padding-bottom:1px;background-color: #fafafa;    padding-right: 15px;}
+
+.right_Menu{margin-bottom: 90px;}
+/*下拉加载*/
+#show{display:none;	}
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url("../images/pull-icon@2x.png") 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+.ot-menu,.menutype,.list-divtwo{width:100%;}
+.left_Menu{margin-bottom: 90px;} 
+/*修改背景色*/
+.selectcity-conkj a{ border: 1px solid #eeeeee;background-color: #eeeeee;}
+ .header-nav{position: fixed;max-width: 640px;    top: 45px;}  
+.uroa-selmnhj{top: 85px;}
+
+.wifi-4g{background-size: 15px 13px;}

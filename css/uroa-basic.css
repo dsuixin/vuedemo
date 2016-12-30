@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*** 清零 ***/
+/*----------------------------------------------------------------------------------*/
+
+body, ul, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td.img, div, dl, dt, dd, input {
+	margin:0;
+	padding:0;
+	border:none;
+}
+body{font:400 14px/1.5 Arial,"Lucida Grande",Verdana,"Microsoft YaHei",hei;background:#f8f8f8; color:#333;}
+
+.uroa-content{min-width: 320px; max-width: 640px; width: 100%; margin: 0px auto; font-family:"Microsoft YaHei", 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif; font-size: 12px;}
+li{list-style:none;}
+h1, h2, h3, h4, h5, h6, b{font-weight:normal; font-size:12px;}
+i, em {font-style:normal;}
+input, textarea, select{outline:none;}
+input{border:none 0;}
+input::-ms-clear{display:none;}
+textarea{resize:none;}
+a{text-decoration:none;outline:none;color:#333;}
+a img{border:none;}
+.clear:after{display:block; content:''; clear:both;}
+.clear{zoom:1;}
+.fl {display:inline; float:left;}
+.fr {display:inline; float:right;}
+dfn{ font-style:normal;}

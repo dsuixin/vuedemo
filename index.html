@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>vue</title> 
+<link rel="stylesheet" href="./css/vue.css" />
+</head>
+<body>
+    <div id="app"> 
+      <table  class="table"> 
+          <tr>
+            <th>id</th><th>name</th><th>phone</th><th>操作</th>
+          </tr>  
+
+          <tr v-for="todo in gridData" v-cloak>
+            <td v-on:click="showUpdateCustomer"> {{ todo.id}}</td><td>{{todo.name}}</td><td>{{todo.phone}}</td><td v-on:click="deleteCustomer(todo.id)">删除</td>
+          </tr> 
+      </table>
+      <input type="button" value="create"  v-on:click="createCustomer" style="margin: 0 auto;display: block;"/>
+      <!-- add -->
+      <div class="fixed" v-el:fixbox>
+        <form action="" >
+            <!-- <p>id <input type="text" name="id" v-model="item.id"> </p> -->
+            <p>name <input type="text" name="name" v-model="item.name"> </p>
+            <p>phone <input type="text" name="phone" v-model="item.phone"> </p>  
+            <input type="button" value="add" v-on:click="addCustomer" />  
+        </form>
+      </div> 
+      <!-- update -->
+      <div class="fixed" v-el:updatebox>
+        <form action="" >
+            <p>id <input type="text" name="id" v-model="item.id"> </p> 
+            <p>name <input type="text" name="name" v-model="item.name"> </p>
+            <p>phone <input type="text" name="phone" v-model="item.phone"> </p>  
+            <input type="button" value="edit" v-on:click="updateCustomer" />  
+        </form>
+      </div> 
+    </div>
+   <script src="./js/vue.js"></script>  
+   <script src="./js/vue-resource.js"></script>     
+   <script src="./js/data.js"></script>     
+</body>
+</html>
