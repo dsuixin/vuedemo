@@ -12,8 +12,8 @@
             <th>id</th><th>name</th><th>phone</th><th>操作</th>
           </tr>  
 
-          <tr v-for="todo in gridData" v-cloak>
-            <td v-on:click="showUpdateCustomer"> {{ todo.id}}</td><td>{{todo.name}}</td><td>{{todo.phone}}</td><td v-on:click="deleteCustomer(todo.id)">删除</td>
+          <tr v-for="(index,todo) in gridData" v-cloak>
+            <td v-on:click="showUpdateCustomer($index)" id="{{$index}}"> {{ todo.id}}</td><td>{{todo.name}}</td><td>{{todo.phone}}</td><td v-on:click="deleteCustomer(todo.id)">删除</td>
           </tr> 
       </table>
       <input type="button" value="create"  v-on:click="createCustomer" style="margin: 0 auto;display: block;"/>
@@ -29,10 +29,10 @@
       <!-- update -->
       <div class="fixed" v-el:updatebox>
         <form action="" >
-            <p>id <input type="text" name="id" v-model="item.id"> </p> 
+            <p>id <input type="text" name="id" v-model="item.id" readonly="readonly" > </p> 
             <p>name <input type="text" name="name" v-model="item.name"> </p>
             <p>phone <input type="text" name="phone" v-model="item.phone"> </p>  
-            <input type="button" value="edit" v-on:click="updateCustomer" />  
+            <input type="button" value="edit" v-on:click="updateCustomer(item.id)" />  
         </form>
       </div> 
     </div>

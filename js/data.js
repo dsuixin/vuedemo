@@ -8,6 +8,7 @@ var demo = new Vue({
         addUrl: 'http://localhost/vuedemo/m/api/ad_save.php',
         deleteUrl: 'http://localhost/vuedemo/m/api/delete.php',
         updateUrl: 'http://localhost/vuedemo/m/api/update.php',
+        editGetUrl: 'http://localhost/vuedemo/m/api/editget.php',
         item: { 
           id: '',
           name: '',
@@ -66,17 +67,34 @@ var demo = new Vue({
           }); 
         },
         //显示更新form弹框
-        showUpdateCustomer: function() {
+        showUpdateCustomer: function(index) {
           //var vm = this;
           //console.log(this.$els.fixbox);// 获取节点this.$els.msg.textContent 
-          this.$els.updatebox.style.display = "block";
-           
+          //
+          var id = this.gridData[index].id  ;
+          console.log(id)
+          this.$http.get(this.editGetUrl+ '?id=' + id)
+            .then((response) => {
+                var obj = eval ("(" + response.data + ")");
+                this.$set('item', obj);
+                console.log(this.item);  
+                //console.log(response);  
+                this.$els.updatebox.style.display = "block";
+            }) 
         },
         //修改更新数据
         updateCustomer: function(id) {
-          this.$http.put(this.updateUrl + '?id=' + id , this.item, {emulateJSON:true})
+          console.log(id);
+          this.$http.post(this.updateUrl + '?id=' + id , this.item, {emulateJSON:true})
             .then((response) => {
-              this.getCustomers()
+              console.log(response);
+              if(response.data=="1"){ 
+                  this.getCustomers(); 
+                  this.$els.updatebox.style.display = "none";
+                  console.log("更新数据库成功");
+                }else{
+                  console.log("更新数据库失败");
+                } 
             })
         }
       }
